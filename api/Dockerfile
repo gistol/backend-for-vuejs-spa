@@ -1,6 +1,9 @@
-ARG PHP_VERSION=7.2
+ARG PHP_VERSION=7.2.5
 ARG ALPINE_VERSION=3.7
 FROM php:${PHP_VERSION}-fpm-alpine${ALPINE_VERSION}
+
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN docker-php-ext-enable mysqli
 
 RUN apk add --no-cache \
 		git
