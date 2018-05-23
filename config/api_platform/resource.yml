@@ -1,0 +1,6 @@
+App\Entity\Categories:
+    collectionOperations:
+        get: ~
+        post: ~
+    itemOperations:
+        get: ~
